@@ -4,16 +4,16 @@ arrowIcons = document.querySelectorAll(".carousel-wrapper i");
 
 let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
+// fungsi ini digunakan untuk menyembunyikan button "<" ketika carousel sudah mencapai gambar paling kiri dan menyembunyikan button ">" ketika carousel sudah mencapai gambar paling kanan.
 const showHideIcons = () => {
-    // showing and hiding prev/next icon according to carousel scroll left value
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft >= scrollWidth ? "none" : "block";
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+    arrowIcons[0].style.display = carousel.scrollLeft <= 0 ? "none" : "block";
+    arrowIcons[1].style.display = Math.ceil(carousel.scrollLeft) >= scrollWidth ? "none" : "block";
 }
 
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
+        let firstImgWidth = firstImg.clientWidth;
         // if clicked icon is left, reduce width value from the carousel scroll left else add to it
         carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
 
@@ -26,7 +26,7 @@ const autoSlide = () => {
     if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
 
     positionDiff = Math.abs(positionDiff);
-    let firstImgWidth = firstImg.clientWidth + 14;
+    let firstImgWidth = firstImg.clientWidth;
     // getting difference value that needs to add or reduce from carousel left to take middle img centered
     let valDifference = firstImgWidth - positionDiff;
 
