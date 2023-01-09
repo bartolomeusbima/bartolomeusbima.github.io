@@ -102,7 +102,7 @@ header {
     transition-delay: 0.5s;
 }
 
-.solidcast-card:hover {
+.solidcast-section:hover > .solidcast-card {
     width: 90vw;
     transition-delay: 0s;
 }
@@ -132,7 +132,7 @@ header {
     transition: 0.5s;
 }
 
-.solidcast-card:hover > .circle::before {
+.solidcast-section:hover > .solidcast-card > .circle::before {
     clip-path: circle(90vw at center);
 }
 
@@ -143,7 +143,7 @@ header {
     transition-delay: 0.5s;
 }
 
-.solidcast-card:hover > .circle > .image {
+.solidcast-section:hover > .solidcast-card > .circle > .image {
     transform: scale(0%);
     transition-delay: 0s;
 }
