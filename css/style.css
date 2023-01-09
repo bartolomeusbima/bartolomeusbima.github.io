@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,8 +12,10 @@ body {
 }
 
 .header-container {
-    background: url('../images/img_fg.png'), url('../images/img_logo_brix.png'), url('../images/img_bg.jpg');
+    position: relative;
     height: 100vh;
+    width: calc(100vw - (100vw - 100%));
+    background: url('../images/img_fg.png'), url('../images/img_logo_brix.png'), url('../images/img_bg.jpg');
     background-position: center, center 25%, center;
     background-repeat: no-repeat;
     background-size: cover, 50%, cover;
@@ -22,8 +26,8 @@ body {
     content: '';
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 25%;
+    width: calc(100vw - (100vw - 100%));
+    height: 25vh;
     background: linear-gradient(to bottom, transparent, #0D1B2A);
 }
 
@@ -80,11 +84,27 @@ header {
     color: #000000;
 }
 
-.carousel-section {
+.carousel-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 50px 0 0 0;
+}
+
+.carousel-title > p {
+    color: white;
+    font-size: 10vh;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.carousel-body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 60vh;
+    margin: 0 0 50px 0;
 }
 
 .carousel-wrapper {
@@ -143,8 +163,10 @@ header {
 }
 
 .banner-section {
-    background: url('../images/img_split_landscape.jpg');
+    position: relative;
     height: 100vh;
+    width: calc(100vw - (100vw - 100%));
+    background: url('../images/img_split_landscape.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,10 +176,19 @@ header {
 .banner-section::before {
     content: '';
     position: absolute;
-    top: 200vh;
+    top: 0vh;
     width: 100%;
     height: 25%;
     background: linear-gradient(to top, transparent, #0D1B2A);
+}
+
+.banner-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0vh;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to bottom, transparent, #0D1B2A);
 }
 
 .partner-section {
@@ -343,5 +374,21 @@ header {
     
     .partner > a > img {
         height: 7.5vh;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .carousel-title > p {
+        font-size: 7vh;
+    }
+
+    .carousel-wrapper > i:first-child {
+        left: 23px;
+        display: none;
+    }
+    
+    .carousel-wrapper > i:last-child {
+        right: 23px;
     }
 }
