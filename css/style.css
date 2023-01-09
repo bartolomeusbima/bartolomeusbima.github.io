@@ -84,6 +84,70 @@ header {
     color: #000000;
 }
 
+.solidcast-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.solidcast-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.solidcast-card:hover {
+    width: 90vw;
+    transition-delay: 0s;
+}
+
+.solidcast-card > .circle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solidcast-card > .circle::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.solidcast-card:hover > .circle::before {
+    clip-path: circle(90vw at center);
+}
+
+.solidcast-card > .circle > .image {
+    position: relative;
+    width: 300px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.solidcast-card:hover > .circle > .image {
+    transform: scale(0%);
+    transition-delay: 0s;
+}
+
 .carousel-title {
     display: flex;
     justify-content: center;
@@ -191,42 +255,6 @@ header {
     background: linear-gradient(to bottom, transparent, #0D1B2A);
 }
 
-.partner-section {
-    background-color: #0D1B2A;
-    min-height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-}
-
-.partner-wrapper {
-    max-width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.partner-wrapper > .partner-text {
-    color: #E0E1DD;
-    text-transform: uppercase;
-    font-size: 7.5vh;
-    font-weight: bold;
-    max-width: calc(100%/3);
-    text-align: center;
-}
-
-.partner-wrapper > .partner {
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.partner > a > img {
-    height: 12.5vh;
-    object-fit: cover;
-    margin: 15px;
-}
-
 @media (max-width: 992px) {
     .header-container {
         background-size: cover, 75%, cover;
@@ -234,43 +262,6 @@ header {
 
     .carousel > img {
         width: calc(100%/2);
-    }
-
-    .partner-section {
-        background-color: #0D1B2A;
-        min-height: 30vh;
-    }
-
-    .partner-wrapper {
-        max-width: 100%;
-        position: relative;
-        display: grid;
-        justify-content: center;
-    }
-
-    .partner-wrapper > .partner-text {
-        font-size: xx-large;
-        font-weight: bold;
-        max-width: 100%;
-    }
-
-    .partner-text > a {
-        display: flex;
-        justify-content: center;
-    }
-
-    .partner-wrapper > .partner {
-        cursor: pointer;
-        display: flex;
-    }
-
-    .partner > a {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .partner > a > img {
-        height: 12.5vh;
     }
 }
 
@@ -356,24 +347,6 @@ header {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: scroll;
-    }
-
-    .partner-wrapper > .partner-text {
-        margin: 10px 0px;
-    }
-
-    .partner-wrapper > .partner {
-        cursor: pointer;
-        display: grid;
-    }
-
-    .partner > a {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .partner > a > img {
-        height: 7.5vh;
     }
 }
 
