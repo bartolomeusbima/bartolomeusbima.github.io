@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     margin: 0px;
@@ -100,10 +101,14 @@ header {
     border-radius: 20px;
     transition: 0.5s;
     transition-delay: 0.5s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.solidcast-section:hover > .solidcast-card {
+.solidcast-section.active > .solidcast-card {
     width: 90vw;
+    height: 75vh;
     transition-delay: 0s;
 }
 
@@ -132,7 +137,7 @@ header {
     transition: 0.5s;
 }
 
-.solidcast-section:hover > .solidcast-card > .circle::before {
+.solidcast-section.active > .solidcast-card > .circle::before {
     clip-path: circle(90vw at center);
 }
 
@@ -143,9 +148,56 @@ header {
     transition-delay: 0.5s;
 }
 
-.solidcast-section:hover > .solidcast-card > .circle > .image {
+.solidcast-section.active > .solidcast-card > .circle > .image {
     transform: scale(0%);
     transition-delay: 0s;
+}
+
+.solidcast-section > .solidcast-card > .content {
+    position: relative;
+    width: 50%;
+    left: 45%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.solidcast-section.active > .solidcast-card > .content {
+    left: 45%;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.content > h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    line-height: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.content > p {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.solidcast-card > .product-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 500px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.solidcast-section.active > .solidcast-card > .product-image {
+    left: 25%;
+    transform: translate(-50%, -50%) scale(1);
+    transition-delay: 0.5s;
 }
 
 .carousel-title {
