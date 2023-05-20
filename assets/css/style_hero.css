@@ -1,0 +1,226 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(38, 56, 76, 0.2)), url("../img/bg_hero.jpg") top center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: -90px;
+    background-attachment: fixed;
+  }
+  
+  #hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  #hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -1px 0 2px #2f4d5a;
+  }
+  
+  #hero h2 {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: -1px 0 2px #2f4d5a;
+  }
+  
+  #hero .hero-container .wrapper .button {
+    display: inline;
+    height: 90px;
+    width: 90px;
+    float: left;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+  }
+  
+  #hero .hero-container .wrapper .button:hover {
+    width: 450px;
+  }
+  
+  #hero .hero-container .wrapper .button .icon {
+    display: inline;
+    height: 90px;
+    width: 90px;
+    float: left;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 90px;
+    transition: all 0.3s ease-out;
+  }
+  
+  #hero .hero-container .wrapper .button:hover .icon {
+    background: #18d26e;
+  }
+
+  #hero .hero-container .wrapper .button .icon img {
+    max-width: 48px;
+  }
+  
+  #hero .hero-container .wrapper .button:hover .icon img {
+    filter: brightness(0) invert(1);
+    max-width: 48px;
+  }
+  
+  #hero .hero-container .wrapper .button span {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 90px;
+    margin-right: 10px;
+    transition: all 0.3s ease-out;
+  }
+  
+  #hero .hero-container .wrapper .button:nth-child(1) span {
+    color: #18d26e;
+  }
+  
+  #hero .hero-container .wrapper .button:nth-child(2) span {
+    color: #18d26e;
+  }
+  
+  #hero .btn-get-started {
+    position: absolute;
+    font-size: 36px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    padding: 10px;
+    margin: 75px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+  }
+  
+  #hero .btn-get-started:hover {
+    padding-top: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    #hero .hero-container .wrapper .button {
+        display: inline;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 5px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-out;
+      }
+      
+      #hero .hero-container .wrapper .button:hover {
+        width: 275px;
+      }
+      
+      #hero .hero-container .wrapper .button .icon {
+        display: inline;
+        height: 60px;
+        width: 60px;
+        float: left;
+        text-align: center;
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(1):hover .icon {
+        background: #18d26e;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(2) .icon {
+        background: #fff;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(1) .icon #whatsapp {
+        max-width: 28px;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(2) .icon #tokopedia {
+        max-width: 28px;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(2):hover .icon {
+        background: #18d26e;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(1):hover .icon #whatsapp {
+        filter: brightness(0) invert(1);
+        max-width: 28px;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(2):hover .icon #tokopedia {
+        filter: brightness(0) invert(1);
+        max-width: 28px;
+      }
+      
+      #hero .hero-container .wrapper .button span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-right: 10px;
+        transition: all 0.3s ease-out;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(1) span {
+        color: #18d26e;
+      }
+      
+      #hero .hero-container .wrapper .button:nth-child(2) span {
+        color: #18d26e;
+      }
+  }
