@@ -320,6 +320,10 @@ h6 {
   background: #fff;
 }
 
+#hero .hero-container .wrapper .button:nth-child(1) .icon #whatsapp {
+  max-width: 56px;
+}
+
 #hero .hero-container .wrapper .button:nth-child(2) .icon #tokopedia {
   max-width: 48px;
 }
@@ -328,12 +332,17 @@ h6 {
   background: #18d26e;
 }
 
+#hero .hero-container .wrapper .button:nth-child(1):hover .icon #whatsapp {
+  filter: brightness(0) invert(1);
+  max-width: 56px;
+}
+
 #hero .hero-container .wrapper .button:nth-child(2):hover .icon #tokopedia {
   filter: brightness(0) invert(1);
   max-width: 48px;
 }
 
-#hero .hero-container .wrapper .button .icon i {
+/* #hero .hero-container .wrapper .button .icon i {
   font-size: 45px;
   line-height: 90px;
   transition: all 0.3s ease-out;
@@ -341,7 +350,7 @@ h6 {
 
 #hero .hero-container .wrapper .button:hover .icon i {
   color: #fff;
-}
+} */
 
 #hero .hero-container .wrapper .button span {
   font-size: 25px;
