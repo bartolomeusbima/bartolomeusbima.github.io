@@ -105,11 +105,7 @@
     transition: all 0.3s ease-out;
   }
   
-  #hero .hero-container .wrapper .button:nth-child(1) span {
-    color: #18d26e;
-  }
-  
-  #hero .hero-container .wrapper .button:nth-child(2) span {
+  #hero .hero-container .wrapper .button span {
     color: #18d26e;
   }
   
@@ -149,78 +145,78 @@
     }
 
     #hero .hero-container .wrapper .button {
-        display: inline;
-        height: 60px;
-        width: 60px;
-        float: left;
-        margin: 5px;
-        overflow: hidden;
-        background: #fff;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-out;
-      }
+      display: inline;
+      height: 60px;
+      width: 60px;
+      float: left;
+      margin: 5px;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-out;
+    }
       
-      #hero .hero-container .wrapper .button:hover {
-        width: 275px;
-      }
+    #hero .hero-container .wrapper .button:hover {
+      width: 275px;
+    }
       
-      #hero .hero-container .wrapper .button .icon {
-        display: inline;
-        height: 60px;
-        width: 60px;
-        float: left;
-        text-align: center;
-        border-radius: 50px;
-        box-sizing: border-box;
-        line-height: 60px;
-        transition: all 0.3s ease-out;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(1):hover .icon {
-        background: #18d26e;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(2) .icon {
-        background: #fff;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(1) .icon #whatsapp {
-        max-width: 28px;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(2) .icon #tokopedia {
-        max-width: 28px;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(2):hover .icon {
-        background: #18d26e;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(1):hover .icon #whatsapp {
-        filter: brightness(0) invert(1);
-        max-width: 28px;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(2):hover .icon #tokopedia {
-        filter: brightness(0) invert(1);
-        max-width: 28px;
-      }
-      
-      #hero .hero-container .wrapper .button span {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 60px;
-        margin-right: 10px;
-        transition: all 0.3s ease-out;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(1) span {
-        color: #18d26e;
-      }
-      
-      #hero .hero-container .wrapper .button:nth-child(2) span {
-        color: #18d26e;
-      }
+    #hero .hero-container .wrapper .button .icon {
+      display: inline;
+      height: 60px;
+      width: 60px;
+      float: left;
+      text-align: center;
+      border-radius: 50px;
+      box-sizing: border-box;
+      line-height: 60px;
+      transition: all 0.3s ease-out;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(1):hover .icon {
+      background: #18d26e;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(2) .icon {
+      background: #fff;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(1) .icon #whatsapp {
+      max-width: 28px;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(2) .icon #tokopedia {
+      max-width: 28px;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(2):hover .icon {
+      background: #18d26e;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(1):hover .icon #whatsapp {
+      filter: brightness(0) invert(1);
+      max-width: 28px;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(2):hover .icon #tokopedia {
+      filter: brightness(0) invert(1);
+      max-width: 28px;
+    }
+    
+    #hero .hero-container .wrapper .button span {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 60px;
+      margin-right: 10px;
+      transition: all 0.3s ease-out;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(1) span {
+      color: #18d26e;
+    }
+    
+    #hero .hero-container .wrapper .button:nth-child(2) span {
+      color: #18d26e;
+    }
   }
