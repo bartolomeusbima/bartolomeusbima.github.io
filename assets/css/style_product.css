@@ -18,6 +18,28 @@
   .product .member .pic {
     overflow: hidden;
   }
+
+  .product .member .member-title {
+    position: absolute;
+    bottom: 92%;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 15px 0;
+    color: #2f4d5a;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    /* overflow: hidden; */
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .product .member .member-title h4 {
+    margin: 0px;
+    font-weight: 800;
+    font-size: 28px;
+    color: #2f4d5a;
+    position: relative;
+  }
   
   .product .member .member-info {
     position: absolute;
@@ -29,12 +51,12 @@
     color: #2f4d5a;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     max-height: 200px;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: max-height 0.5s ease-in-out;
   }
   
   .product .member:hover .member-info {
-    max-height: 300px;
+    max-height: 400px;
   }
 
   .product .member .member-info .wrapper {
@@ -42,7 +64,7 @@
   }
 
   .product .member .member-info .wrapper .icon {
-    margin: 0 10px;
+    margin: 0 10px 0 25px;
     text-align: center;
     cursor: pointer;
     display: flex;
@@ -56,7 +78,7 @@
   }
 
   .product .member .member-info .wrapper .product-text {
-    margin: 0 10px;
+    margin: 0 25px 0 10px;
     text-align: center;
     cursor: pointer;
     display: flex;
@@ -75,11 +97,11 @@
     display: block;
     height: 60px;
     width: 60px;
-    background: #fff;
+    background: lightgrey;
     border-radius: 50%;
     position: relative;
     z-index: 2;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); */
     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -106,9 +128,9 @@
   }
 
   .product .member .member-info .wrapper .icon:hover .tool-tip {
-    top: -70px;
+    top: -40px;
     opacity: 1;
-    color: #2f4d5a;
+    color: #fff;
     pointer-events: auto;
   }
 
@@ -125,38 +147,13 @@
   }
 
   .product .member .member-info .wrapper .icon:hover span {
-    color: #000;
-  }
-  
-  .product .member .member-info .wrapper .icon:hover span,
-  .product .member .member-info .wrapper .icon:hover .tool-tip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+    color: #fff;
   }
 
     .product .member .member-info .wrapper .tooltip:hover span,
     .product .member .member-info .wrapper .tooltip:hover .tool-tip,
     .product .member .member-info .wrapper .tooltip:hover .tool-tip:before {
     background: #67b0d1;
-  }
-
-  .product .member h4 {
-    font-weight: 800;
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #2f4d5a;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  
-  .product .member h4::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 500px;
-    height: 1px;
-    background: #b1cbd7;
-    bottom: 0;
-    left: calc(50% - 250px);
   }
   
   @media (max-width: 992px) {
