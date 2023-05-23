@@ -2,6 +2,7 @@
 # Product
 --------------------------------------------------------------*/
 .product {
+    display: flex;
     height: 100vh;
     background: #26384c;
 }

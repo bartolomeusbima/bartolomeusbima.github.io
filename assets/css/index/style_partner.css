@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+# Partner
+--------------------------------------------------------------*/
+#partner {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../img/bg_partner.jpg") top center;
+    background-size: cover;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#partner .title {
+    text-align: center;
+}
+  
+#partner h4 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -1px 0 2px #2f4d5a;
+}
+  
+@media (max-width: 992px) {
+    #partner .title {
+        margin-bottom: 25px;
+    }
+
+    #partner h4 {
+        font-size: 72px;
+        font-weight: 800;
+        margin: 0;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: -1px 0 2px #2f4d5a;
+    }
+
+    #partner .member .pic {
+        text-align: center;
+    }
+
+    #partner .member .pic img {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #partner h4 {
+        font-size: 64px;
+        font-weight: 800;
+        margin: 0;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: -1px 0 2px #2f4d5a;
+    }
+
+    #partner .member .pic img {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #partner h4 {
+        font-size: 48px;
+        font-weight: 800;
+        margin: 0;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: -1px 0 2px #2f4d5a;
+    }
+
+    #partner .member .pic img {
+        width: 75vw;
+    }
+}
