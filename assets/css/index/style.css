@@ -290,6 +290,15 @@ section {
   background: linear-gradient(to top, transparent, #26384c);
 }
 
+#banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0vh;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
 /* @media (max-width: 1200px) {
   .about .content {
     padding-right: 0;
