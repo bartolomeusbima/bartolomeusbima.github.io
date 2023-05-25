@@ -24,7 +24,7 @@
     overflow: hidden;
   }
 
-  .product .member .product-pic:hover::before {
+  .product .member .product-pic::before {
     content: "";
     position: absolute;
     left: 0;
@@ -34,6 +34,16 @@
     background: rgba(0, 0, 0, 0.75);
     z-index: 0;
     cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    opacity: 0;
+  }
+
+  .product .member .product-pic:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
   }
 
   .product .member .product-pic .learn-more {
