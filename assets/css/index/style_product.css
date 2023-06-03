@@ -121,7 +121,7 @@
 
   .product .member .member-info .wrapper .product-text {
     margin: 0 25px 0 10px;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -131,8 +131,8 @@
     z-index: 2;
     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 100;
-    font-size: 16px;
-    font-style: italic;
+    font-size: 14px;
+    /* font-style: italic; */
   }
 
   .product .member .member-info .wrapper .icon span {
