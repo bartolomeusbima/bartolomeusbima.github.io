@@ -110,30 +110,16 @@ body {
   }
 
 /*--------------------------------------------------------------
-# Banner
---------------------------------------------------------------*/
-#banner {
-    margin-top: 75px;
-}
-
-#banner img {
-    display:block;
-    margin:auto;
-  }
-  
-  @media (max-width: 768px) {
-    #banner {
-      height: 100vh;
-      background: url("../../img/img_split_portrait.jpg") top center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: scroll;
-    }
-  }
-
-/*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+.why-us {
+  margin-top: 75px;
+}
+
+.why-us .content .testo {
+  text-align: center;
+}
+
 .why-us .content {
     padding: 0px 100px 0 100px;
   }
