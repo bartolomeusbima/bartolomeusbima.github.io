@@ -170,7 +170,7 @@
   }
 
   .product .member .member-info .wrapper .icon:hover .tool-tip {
-    top: -40px;
+    top: -50px;
     opacity: 1;
     color: #fff;
     pointer-events: auto;
