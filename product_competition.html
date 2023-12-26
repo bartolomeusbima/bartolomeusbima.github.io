@@ -24,6 +24,9 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/product_competition/style.css" rel="stylesheet">
   <link href="assets/css/product_competition/style_img.css" rel="stylesheet">
@@ -125,6 +128,21 @@
       </div>
     </section><!-- End Portfolio Details Section -->
 
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+              <div id="container" style="height: 100vh;"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -181,5 +199,67 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<script>
+  anychart.onDocumentReady(function () {
+  // our data from bulbapedia
+    var data1 = [
+      {y: "Braking Performance", x: "Braking Performance", value: 15},
+      {y: "Resistance to Crack", x: "Resistance to Crack", value: 16},
+      {y: "Initial Bite", x: "Initial Bite", value: 11},
+      {y: "Vibration Damping (Noise)", x: "Vibration Damping (Noise)", value: 11},
+      {y: "Pad Life", x: "Pad Life", value: 9},
+      {y: "Disc Life", x: "Disc Life", value: 12},
+      {y: "Corrosion Resistance", x: "Corrosion Resistance", value: 11},
+      {y: "Dimensional Stability", x: "Dimensional Stability", value: 15},
+      {y: "Pedal Feel", x: "Pedal Feel", value: 15},
+    ];
+
+    var data3 = [
+      {y: "Braking Performance", x: "Braking Performance", value: 10},
+      {y: "Resistance to Crack", x: "Resistance to Crack", value: 10},
+      {y: "Initial Bite", x: "Initial Bite", value: 10},
+      {y: "Vibration Damping (Noise)", x: "Vibration Damping (Noise)", value: 10},
+      {y: "Pad Life", x: "Pad Life", value: 10},
+      {y: "Disc Life", x: "Disc Life", value: 10},
+      {y: "Corrosion Resistance", x: "Corrosion Resistance", value: 10},
+      {y: "Dimensional Stability", x: "Dimensional Stability", value: 10},
+      {y: "Pedal Feel", x: "Pedal Feel", value: 10},
+    ];
+
+    // create radar chart
+    var chart = anychart.radar();
+    // set chart yScale settings
+    chart.yScale()
+      .minimum(0)
+      .maximum(18)
+      .ticks({'interval':2});
+
+    // color alternating cells
+    chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
+
+    // create first series
+    chart.area(data1).name('Competition Series').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+    // create third series
+    chart.area(data3).name('Standard (Baseline)').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
+
+    // set chart title
+    chart.title("Product Comparison")
+    // set legend
+    .legend(true);
+
+    var tooltip = chart.tooltip();
+    tooltip.format(function() {
+      tooltip.titleFormat("{%y}");
+      tooltip.format("{%x}: {%value}");
+    });
+
+    // set container id for the chart
+    chart.container('container');
+    // initiate chart drawing
+    chart.draw();
+
+   });
+</script>
 
 </html>
