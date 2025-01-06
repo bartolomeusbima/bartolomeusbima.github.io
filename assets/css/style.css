@@ -2769,6 +2769,7 @@ img.u-pull-left {
 
 .list-block__item {
     margin-bottom : var(--vspace-0_25);
+    padding: 0;
 }
 
 .list-block__title {
@@ -4339,6 +4340,19 @@ img.u-pull-left {
     margin-right: var(--vspace-0_25);
 }
 
+.footer-newsletter {
+    display: block;
+    /* margin-bottom: 5px; */
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: calc(var(--text-size) * 0.8889);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    margin-bottom: var(--vspace-0_125);
+}
+
 /* ------------------------------------------------------------------- 
  * ## footer logo
  * ------------------------------------------------------------------- */
@@ -4370,12 +4384,58 @@ img.u-pull-left {
     padding-top : var(--vspace-1);
 }
 
-.s-footer__bottom-left {
-    padding-right : 4.4rem;
+/* ------------------------------------------------------------------- 
+ * ## subscription form
+ * ------------------------------------------------------------------- */
+ .s-footer__subscribe {
+    --input-height : 7.2rem;
+    --btn-width    : 180px;
 }
 
-.s-footer__bottom-right {
-    padding-left : 4.4rem;
+.s-footer__subscribe h6 {
+    margin-bottom : var(--vspace-0_75);
+}
+
+.s-footer__subscribe form {
+    display       : flex;
+    flex-flow     : row wrap;
+    margin-bottom : 0;
+}
+
+.s-footer__subscribe input[type="email"],
+.s-footer__subscribe input[type="submit"],
+.s-footer__subscribe .ms-status {
+    flex : none;
+}
+
+.s-footer__subscribe input[type="email"] {
+    --input-height   : 7.2rem;
+    width            : calc(100% - var(--btn-width));
+    background-color : var(--color-gray-6);
+    color            : var(--color-text);
+    border           : none;
+    padding          : var(--input-vpadding) calc(2.8rem - 1px);
+    text-align       : left;
+    margin           : 0;
+}
+
+.s-footer__subscribe input[type="email"]:focus,
+.s-footer__subscribe input[type="email"]:hover {
+    box-shadow : none;
+}
+
+.s-footer__subscribe input[type="submit"] {
+    --btn-height : var(--input-height);
+    width        : var(--btn-width);
+    margin       : 0;
+}
+
+.s-footer__subscribe .mc-status {
+    width       : 100%;
+    margin-top  : var(--vspace-0_5);
+    font-size   : var(--text-sm);
+    font-weight : 400;
+    color       : var(--color-1);
 }
 
 /* ------------------------------------------------------------------- 
@@ -4386,6 +4446,7 @@ img.u-pull-left {
     border-top  : 0.1px solid var(--color-gray-10);
     margin-top  : var(--vspace-0_5);
     padding-top  : var(--vspace-0_5);
+    display: inline-block;
 }
 
 .s-footer__social {
